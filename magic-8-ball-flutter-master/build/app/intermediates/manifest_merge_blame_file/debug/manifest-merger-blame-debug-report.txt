@@ -34,7 +34,7 @@
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
 28-->C:\Users\hp\StudioProjects\magic-8-ball-flutter-master\android\app\src\main\AndroidManifest.xml:18:9-43
-29        android:label="magic_8_ball" >
+29        android:label="magic 8 ball" >
 29-->C:\Users\hp\StudioProjects\magic-8-ball-flutter-master\android\app\src\main\AndroidManifest.xml:17:9-37
 30        <activity
 30-->C:\Users\hp\StudioProjects\magic-8-ball-flutter-master\android\app\src\main\AndroidManifest.xml:19:9-37:20

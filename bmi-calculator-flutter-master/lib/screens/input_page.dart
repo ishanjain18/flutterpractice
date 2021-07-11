@@ -200,15 +200,12 @@ class _InputPageState extends State<InputPage> {
                   CalculatorBrain calc =
                       CalculatorBrain(height: height, weight: weight);
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ResultsPage(
-                        bmiResult: calc.BmiCalc(),
-                        bmiResulttext: calc.getResult(),
-                        bmiInterpretaion: calc.getInterpretation(),
-                      ),
-                    ),
-                  );
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ResultsPage(
+                              bmiResult: calc.BmiCalc(),
+                              bmiResulttext: calc.getResult(),
+                              bmiInterpretaion: calc.getInterpretation())));
                 },
                 ButtonText: 'CALCULATE')
           ],

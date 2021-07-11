@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 
@@ -46,15 +47,30 @@ class _CityScreenState extends State<CityScreen> {
                   },
                 ),
               ),
-              FlatButton(
-                onPressed: () {
-                  Navigator.pop(context, cityName);
-                },
-                child: Text(
-                  'Get Weather',
-                  style: kButtonTextStyle,
+              Container(
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(vertical: 40, horizontal: 10),
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.pop(context, cityName);
+                  },
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                    child: Text(
+                      'Get Weather',
+                      style: kButtonTextStyle,
+                    ),
+                  ),
+                  padding: EdgeInsets.all(8),
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
                 ),
-              ),
+              )
             ],
           ),
         ),

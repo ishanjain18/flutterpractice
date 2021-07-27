@@ -8,6 +8,7 @@ class WeatherModel {
   Future<dynamic> getCityWeather(String cityName) async {
     NetworkHelper networkHelper =
         NetworkHelper('$apiURL?q=$cityName&appid=$apiKey&units=metric');
+
     var data = await networkHelper.getData();
     return data;
   }

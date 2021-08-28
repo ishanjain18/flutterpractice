@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:todoey_flutter/models/task.dart';
+import 'package:todoey_flutter/models/task_data.dart';
+import 'package:provider/provider.dart';
 
 class AddTasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    late String newTaskText;
     return SingleChildScrollView(
       child: Container(
         color: Color(0xff757575),
@@ -27,12 +31,19 @@ class AddTasksScreen extends StatelessWidget {
               TextField(
                 autofocus: true,
                 textAlign: TextAlign.center,
+                onChanged: (newText) {
+                  newTaskText = newText;
+                },
               ),
               SizedBox(height: 40.0),
               Container(
                 height: 60,
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Provider.of<TaskData>(context, listen: false)
+                          .addTask(newTaskText);
+                      Navigator.pop(context);
+                    },
                     child: Text(
                       'Add',
                       style: TextStyle(fontSize: 20, color: Colors.white),
